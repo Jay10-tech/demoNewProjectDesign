@@ -1,15 +1,26 @@
 package newDesignPageObject.forms;
 
-public class WizardLastStep extends FormWizardPO{
+import org.openqa.selenium.By;
 
-    public void getDescriptionForTheLastStep(){}
+public class WizardLastStep extends FormWizardPO {
 
-    public void getFirstName(){}
-    public void getLastName(){}
-    public void getAddress(){}
+  public void getDescriptionForTheLastStep() {
+  }
 
-    public void dealThisAlert(){}
+  public String getFirstName() {
+    return getTextFromElement(By.cssSelector("div:nth-child(1) > p:nth-child(2)"));
+  }
 
+  public String getLastName() {
+    return getTextFromElement(By.cssSelector("div:nth-child(2) > p:nth-child(2)"));
+  }
+
+  public String getAddress() {
+    return getTextFromElement(By.cssSelector("div:nth-child(3) > p:nth-child(2)"));
+  }
+
+  public void dealThisAlert() {
+  }
 
 
 }
